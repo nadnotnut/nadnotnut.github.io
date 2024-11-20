@@ -1,129 +1,108 @@
-/* Font and body styling */
-body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-  }
-  
-  body, html {
-    height: 100%;
-    line-height: 1.8;
-    scroll-behavior: smooth;
-
-  }
-
-  input,
-  input::placeholder {
-    font: 0.85rem/3 sans-serif;
-    font-style: italic;
-    color: #597fe8;
+/* Global Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  scroll-behavior: smooth;
 }
-  
-  .img{
-    align-items: center;
-    align-content: center;
-    align-self: center;
-  }
-  /* Full height image header */
-  .bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url('brainwallpaper.jpg'); /* Make sure the image path is correct */
-    min-height: 100%;
-  }
-  
-  /* Custom button hover effect */
-  .custom-button {
-    background-color: #8e9ecb; /* Original background color */
-    color: white; /* Original text color */
-  }
-  
-  .custom-button:hover {
-    background-color: blue ; /* Background turns blue on hover */
-    color: white !important; /* Text turns white on hover */
-  }
 
-  
-  .buttondetect{
-    border-radius: 50px;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+input, input::placeholder {
+  font: 0.85rem/3 sans-serif;
+  font-style: italic;
+  color: #597fe8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.w3-top .w3-bar {
+  padding: 10px 16px;
+}
+
+.w3-bar-item {
+  font-size: 16px;
+}
+
+/* Full-height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url('brainwallpaper.jpg'); /* Ensure the path is correct */
+  min-height: 100vh;
+}
 
 
-  * {box-sizing:border-box}
 
-/* Slideshow container */
+/* Custom Buttons */
+.custom-button {
+  background-color: #8e9ecb;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.custom-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Slideshow Styles */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-  text-align: center; /* Centers the entire slideshow container */
+  text-align: center;
 }
 
-/* Each slide */
 .mySlides {
   display: none;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Centers the content within each slide */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Centering the image within each slide */
 .mySlides img {
   display: block;
-  margin: 0 auto; /* Centers the image within each slide */
+  margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
   user-select: none;
 }
 
-/* The rest of your styles remain unchanged */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
+.prev {
+  left: 0;
+}
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
+/* Dots/Indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -139,44 +118,114 @@ body,h1,h2,h3,h4,h5,h6 {
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+/* Form Section */
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* Center promo section content */
-.w3-row-padding {
+/* Ensure the container takes up the entire viewport */
+.form-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack items vertically */
-  text-align: center; /* Center-align text */
+  justify-content: center; /* Centers the form horizontally */
+  align-items: center;    /* Centers the form vertically */
+  min-height: 60vh;      /* Full height of the viewport */
+  margin: 0;
+  padding: 0;
+  padding-right: 140px;
+  box-sizing: border-box;
 }
 
-.w3-row-padding h3, .w3-row-padding p {
-  margin: 10px 0; /* Add spacing between text elements */
+/* Style for the card */
+.form-card {
+  background-color: #c2c4ca;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limits form width */
+  width: 150%;
 }
 
-/* Center the image within the promo section */
-.w3-row-padding img {
-  margin: 20px 0; /* Add some spacing around the image */
-  max-width: 100%; /* Ensure the image is responsive */
-  height: auto;
+/* Input Fields */
+.w3-input {
+  border-radius: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-h1{
-
-  
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    font-style: italic;
-    font-size: clamp(2.0rem, 5vw + 1rem, 6rem); /* Responsive and prominent font size */
-    line-height: 1.2; /* Adjust line height for better spacing */
+.w3-button {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* Limit button width */
+  margin: 10px auto; /* Center the button */
+  border-radius: 18px;
+  padding: 10px 20px;
 }
-  
+
+
+.w3-input::placeholder {
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  color: #292a2d;
+}
+
+
+
+.w3-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Responsive Typography */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(2.5rem, 5vw + 1rem, 6rem);
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5vw + 1rem, 3rem);
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .w3-bar-item {
+    font-size: 14px;
+  }
+
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .w3-input {
+    font-size: 14px;
+  }
+
+  .custom-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
