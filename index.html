@@ -155,21 +155,23 @@
 
 
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" >
+<!-- Promo Section -->
+<div class="w3-container w3-light-grey" style="padding:50px 10px" >
   <div class="w3-row-padding">
-    <div class="w3-col m8">
-      <h1 style="font-family: 'Playfair Display', serif; font-weight: 800; font-style: italic; font-size: clamp(2.5rem, 5vw + 1rem, 6rem); line-height: 1.2;">
-        What is Epilepsy?
-    </h1>
+    <h1 style="padding-left:370px; font-family: 'Playfair Display', serif; font-weight: 800; font-style: italic; font-size: clamp(2.5rem, 5vw + 1rem, 5rem); line-height: 1.2;">
+      What is Epilepsy?
+  </h1>
+
+    <div class="w3-col m8" style="padding-left: 400px;">
+      
     <br><br>
       <div class="w3-col m4">
-        <img class="w3-image w3-round-large" src="sample mri epi.png" alt="Buildings" width="200" height="200">
+        <img class="w3-image w3-round-large" src="sample mri epi.png" alt="Buildings" width="200" height="200" style="padding-right: 30px;">
       </div>
       <p>
         Epilepsy is a neurological disorder marked by recurrent seizures, which can impact either specific parts of the body or the body as a whole. 
         These seizures result from abnormal electrical activity within the brain.
-      </p><br>
+      </p><br><br>
       <p>
         The diagnosis of epilepsy often relies on manual analysis, a labor-intensive process that is susceptible to human error. 
         Enhanced detection methods are essential to improve accuracy and efficiency in identifying epilepsy through imaging.
@@ -185,36 +187,31 @@
   </div>
 </div>
 
-<!-- Form Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center" style="font-family: 'Playfair Display', serif; font-weight: 600; font-style: italic; font-size: clamp(1.5rem, 5vw + 1rem, 5rem); line-height: 1.2;">Print Your Detection Results</h3>
-  <p class="w3-center w3-large">Save your details and detection results in pdf format later</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="w3-container" style="background-color: #c2c4ca;" style="border-radius: 15px; width: 100%; height: 40px;">
-          <form onsubmit="return saveInfo();"><br>
-            <label for="name" style="font-family: 'Playfair Display', serif; font-weight: 500;">Name:</label>
-            <input type="text" id="name" name="name" class="w3-input w3-border" required style="border-radius: 15px; width: 100%; height: 40px;" placeholder="please enter your name"><br>
+<!-- Form Section --><br><br><br>
+<h3 class="w3-center" style="font-family: 'Playfair Display', serif; font-weight: 600; font-style: italic; font-size: clamp(1.5rem, 5vw + 1rem, 2.5rem); line-height: 1.2;">Print Your Detection Results</h3>
+<p class="w3-center w3-large">Save your details and detection results in PDF format later</p>
+<div class="form-container">
+  <div class="w3-container" id="team">
+   
+    <div class="form-card">
+      <form onsubmit="return saveInfo();">
+        <label for="name" style="font-family: 'Playfair Display', serif; font-weight: 500;">Name:</label>
+        <input type="text" id="name" name="name" class="w3-input w3-border" required style="border-radius: 15px;" placeholder="Please enter your name"><br>
 
-            <label for="phone" style="font-family: 'Playfair Display', serif; font-weight: 500;">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" class="w3-input w3-border" required style="border-radius: 15px; width: 100%; height: 40px;" placeholder="please enter your phone number (010-0000000)"><br>
+        <label for="phone" style="font-family: 'Playfair Display', serif; font-weight: 500;">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" class="w3-input w3-border" required style="border-radius: 15px;" placeholder="Please enter your phone number (e.g., 010-0000000)"><br>
 
-            <label for="address" style="font-family: 'Playfair Display', serif; font-weight: 500;">Address:</label>
-            <input type="text" id="address" name="address" class="w3-input w3-border" required style="border-radius: 15px; width: 100%; height: 40px;" placeholder="please enter your address"><br>
+        <label for="address" style="font-family: 'Playfair Display', serif; font-weight: 500;">Address:</label>
+        <input type="text" id="address" name="address" class="w3-input w3-border" required style="border-radius: 15px;" placeholder="Please enter your address"><br>
 
-            <p><button type="submit" class="w3-button w3-blue w3-block" style="border-radius: 25px; width: 40%; height: 40px;">Save</button></p><br><br>
-
-          </form>
-
-        </div>
-      </div>
-    </div>
-    
-    
+        <button type="submit" class="w3-button w3-blue w3-block" style="border-radius: 25px; max-width: 200px; margin: 0 auto;">Save</button>
+      </form>
     </div>
   </div>
-</div>
+</div><br><br><br>
+
+
+
 
 <script>
   function saveInfo() {
