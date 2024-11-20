@@ -128,7 +128,6 @@ input, input::placeholder {
   min-height: 60vh;      /* Full height of the viewport */
   margin: 0;
   padding: 0;
-  padding-right: 140px;
   box-sizing: border-box;
 }
 
