@@ -19,8 +19,16 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 100%;
-    max-width: 800px; /* Limit maximum width for larger screens */
+    width: 90%; /* Default width for mobile (flexible) */
+    max-width: 800px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Increase container width for larger screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 60%; /* Larger width for desktops and wide screens */
+    }
 }
 
 h3 {
