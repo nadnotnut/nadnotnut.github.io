@@ -16,21 +16,26 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width:1000px;
-    max-width: 800px;
+    width: 90%; /* Default width for small screens */
+    max-width: 800px; /* Limit maximum width for larger screens */
     margin: 0 auto; /* Center the container */
 }
 
-/* Increase container width for larger screens */
-@media (min-width: 2024px) {
+/* Media query for tablets and desktops */
+@media (min-width: 768px) {
     .container {
-        width: 100%; /* Larger width for desktops and wide screens */
+        width: 70%; /* Wider container for medium-sized screens */
     }
 }
 
-.title{
-    font-family: 'Playfair Display', serif;
+@media (min-width: 1200px) {
+    .container {
+        width: 60%; /* Wider container for large desktops */
+    }
+}
 
+.title {
+    font-family: 'Playfair Display', serif;
 }
 
 h3 {
