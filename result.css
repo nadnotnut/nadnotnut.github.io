@@ -7,18 +7,23 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    overflow: hidden; /* Prevent vertical scroll issues */
 }
 
 .container {
-    background-color: rgb(204, 224, 254);
+     background-color: rgb(204, 224, 254);
     padding: 20px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%; /* Default width for small screens */
-    max-width: 800px; /* Limit maximum width for larger screens */
-    margin: 0 auto; /* Center the container */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Media query for tablets and desktops */
@@ -82,7 +87,10 @@ h3 {
 .image-preview {
     border: 2px dashed #05de75;
     padding: 10px;
-    height: 200px;
+    height: auto; /* Allow auto height */
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Limit image preview width */
+    aspect-ratio: 1 / 1; /* Maintain square shape */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,9 +102,11 @@ h3 {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
+    object-fit: cover; /* Prevent stretching */
 }
 
 #detectButton {
+    margin-top: 20px
     padding: 12px 30px;
     background-color: #6f83a7;
     color: white;
