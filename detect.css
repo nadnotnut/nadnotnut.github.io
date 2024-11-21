@@ -7,23 +7,26 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 10px; /* Add padding for smaller devices */
+    box-sizing: border-box;
 }
+
 
 .container {
     background-color: rgb(204, 224, 254);
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 800px;
-    
+    width: 100%;
+    max-width: 800px; /* Limit maximum width for larger screens */
 }
 
 h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 600px;
+    font-size: 35px; /* Adjust font size for smaller screens */
     color: #ffffff;
     letter-spacing: 1px;
     margin-bottom: 20px;
@@ -114,17 +117,19 @@ h3 {
 .image-preview {
     border: 2px dashed #05de75;
     padding: 10px;
-    height: 200px;
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     color: #05de75;
+    max-width: 100%;
 }
 
-.image-preview img {
-    max-width: 100%;
-    max-height: 100%;
+#cameraPreview, .image-preview img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
@@ -174,3 +179,52 @@ h3 {
     font-size: 17px;
     cursor: pointer;
   }
+
+
+/* For tablets and small desktops */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100%; /* Use full width on smaller screens */
+    }
+
+    h3 {
+        font-size: 28px; /* Smaller heading size */
+    }
+
+    #browseButton, #captureButton, #snapButton, #closeButton, #detectButton {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Increase spacing between buttons */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    h3 {
+        font-size: 20px;
+    }
+
+    #fileInput {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .image-preview {
+        min-height: 120px;
+    }
+
+    #browseButton, #captureButton, #snapButton, #closeButton, #detectButton {
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 6px 10px;
+    }
+}
+
