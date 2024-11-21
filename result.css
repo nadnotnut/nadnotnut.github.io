@@ -17,7 +17,7 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto; /* Center horizontally */
     display: flex;
