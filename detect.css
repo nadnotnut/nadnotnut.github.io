@@ -19,8 +19,8 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 100%; /* Default width for mobile (flexible) */
-    max-width: 3000px; /* Limit maximum width */
+    width: 800px; /* Default width for mobile (flexible) */
+    max-width: 800px; /* Limit maximum width */
     margin: 0 auto; /* Center the container */
 }
 
@@ -34,7 +34,7 @@ body {
 h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 35px; /* Adjust font size for smaller screens */
+    font-size: 200px; /* Adjust font size for smaller screens */
     color: #ffffff;
     letter-spacing: 1px;
     margin-bottom: 20px;
