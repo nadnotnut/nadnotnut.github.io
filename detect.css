@@ -20,7 +20,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 90%; /* Default width for mobile (flexible) */
-    max-width: 1000px; /* Limit maximum width */
+    max-width: 3000px; /* Limit maximum width */
     margin: 0 auto; /* Center the container */
 }
 
