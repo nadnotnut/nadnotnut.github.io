@@ -27,7 +27,7 @@ body {
 /* Increase container width for larger screens */
 @media (min-width: 1024px) {
     .container {
-        width: 60%; /* Larger width for desktops and wide screens */
+        width: 80%; /* Larger width for desktops and wide screens */
     }
 }
 
