@@ -59,7 +59,7 @@ h3 {
 }
 
 #browseButton:hover {
-    background: black;
+    background: #0056b3;
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
 }
