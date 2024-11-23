@@ -1,0 +1,182 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #99a7d5, #f2deb5);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for smaller devices */
+
+}
+
+.container {
+    background-color: rgb(204, 224, 254);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+    max-width: 800px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container */
+
+    
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 600px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#fileInput {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+#browseButton {
+    padding: 10px 20px;
+    background: #00a6ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#browseButton:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+#captureButton {
+    padding: 10px 20px;
+    background: #00a6ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#captureButton:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+#snapButton {
+    padding: 10px 20px;
+    background: #37ca0e;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#snapButton:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+#closeButton {
+    padding: 10px 20px;
+    background: #c80e52;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#closeButton:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+
+.image-preview {
+    border: 2px dashed #05de75;
+    padding: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #05de75;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+#detectButton {
+    padding: 12px 30px;
+    background-color: #6f83a7;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#detectButton:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(33, 136, 56, 0.5);
+}
+
+/* Navbar */
+.w3-bar {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.w3-bar .w3-bar-item {
+    padding: 14px 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.w3-bar .w3-bar-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .button-container button {
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+  }
