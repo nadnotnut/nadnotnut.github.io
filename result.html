@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results of Epilepsy Seizures Detection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="result.css">
+  
+  <!-- External resources from W3Schools and Google Fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    /* Style for the green border around the image preview box */
+    #imagePreviewBox {
+      border: 3px solid green;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #imagePreviewBox img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Style for the result text box */
+    #resultTextBox {
+      background-color: #3db8ff; /* Light dusty blue color */
+      padding: 15px;
+      border-radius: 10px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white" style="align-items: center;"><br><br>
+    <div class="container">
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 38px; font-style: italic;">Results of Detection</h3><br>
+
+        <div class="image-preview" id="imagePreviewBox">
+            <!-- Image preview will appear here -->
+        </div>
+
+        <!-- Result text box to display information -->
+        <div id="resultTextBox">
+            <p>Results will be displayed here...</p>
+        </div><br><br>
+
+        <button id="detectButton" onclick="window.location.href='detect.html'">Detect another image</button>
+        <p style="color: #333; font-family:'Playfair Display', serif; font-weight:700; font-style: italic;">Print your results <a href="C:/Users/ADMIN/Documents/FYP/Code/Document from Nadiah_241019_175419.pdf" target="_blank" style="color:blue;">here</a></p> <!-- Link to PDF -->
+    </div>
+  </div>
+</header>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="background-color: #ffffff;">
+  <div class="w3-bar w3-white w3-card" id="myNavbar" style="background-color: #ffffff;">
+    <a href="#home" class="w3-bar-item w3-button w3-wide" style="color: black;"><i class="fa fa-home" style="font-size:26px;"></i></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="background-color: #ffffff; color: black;">
+      <a href="detect.html" class="w3-bar-item w3-button" style="font-family: Montserrat, sans-serif; color: black;">DETECT</a>
+      <a href="index.html" class="w3-bar-item w3-button" style="font-family: Montserrat, sans-serif; color: black;"><i class="fa fa-th"></i> SAMPLE</a>
+      <a href="index.html" class="w3-bar-item w3-button" style="font-family: Montserrat, sans-serif; color: black;"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()" style="background-color: #91a2d4;">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- JavaScript to display the uploaded image from localStorage -->
+<script>
+    // Retrieve and display the image from localStorage when the page loads
+    window.onload = function () {
+        const imagePreviewBox = document.getElementById('imagePreviewBox');
+        const uploadedImage = localStorage.getItem('uploadedImage');
+
+        if (uploadedImage) {
+            // Display the image in the result page
+            imagePreviewBox.innerHTML = `<img src="${uploadedImage}" alt="Detected Image" style="max-width: 100%;">`;
+        } else {
+            alert("No image available for detection.");
+            imagePreviewBox.innerHTML = '<p>No image found. Please upload or capture an image first.</p>';
+        }
+    };
+</script>
+
+</body>
+</html>
