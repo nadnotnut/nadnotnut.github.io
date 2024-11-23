@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 10px; /* Add padding for smaller devices */
+    padding: 5px; /* Add padding for smaller devices */
     box-sizing: border-box;
 }
 
